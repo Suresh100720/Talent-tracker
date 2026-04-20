@@ -7,6 +7,8 @@ import Dashboard from './pages/Dashboard';
 import Candidates from './pages/Candidates';
 import Jobs from './pages/Jobs';
 
+import NotFound from './pages/NotFound';
+
 function App() {
   return (
     <AuthProvider>
@@ -29,7 +31,7 @@ function App() {
           </Route>
 
           {/* Catch all */}
-          <Route path="*" element={<Navigate to="/" replace />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>
     </AuthProvider>
